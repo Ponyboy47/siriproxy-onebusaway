@@ -8,14 +8,15 @@ require 'onebusaway_updated'
 
 class SiriProxy::Plugin::OneBusAway < SiriProxy::Plugin
 def initialize(config)
-   @apiKey = config['api_keyOBA']
+   apiKey = config['api_keyOBA']
+   ::Onebusaway.api_key = '#{apiKey}'
 end
 
 # find stops nearby a given latitude and longitude
 #   - returns an array of Onebusaway::Stop instances
 ##stops = Onebusaway.stops_for_location(:lat => "47.66", :lon => "-122.29")
 	listen_for /Nearest(?: bus)? stop/i do
-		stops = ::Onebusaway_updated.stops_for_location( :lat => "#{location.latitude}", :lon => "#{location.longitude}")
+		stops = Onebusaway_updated.stops_for_location( :lat => "#{location.latitude}", :lon => "#{location.longitude}")
 		say "The nearest bus stop is at #{stops[0]}."
 	request_completed
 	end
