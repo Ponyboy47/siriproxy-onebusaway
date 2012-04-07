@@ -1,1 +1,4 @@
 This plugin is pretty simple and easy to use. Add the appropriate settings from the config-info.yml into your ~/.siriproxy/config.yml and bundle then start SiriProxy.
+STILL UNDER DEVELOPMENT
+I just got my api key for OneBusAway and am currently developing. The only two commands are ..."nearest route/stop" and ..."nearest bus route/stop"
+And I actually havent even tested those yet..sooo use at your own risk
