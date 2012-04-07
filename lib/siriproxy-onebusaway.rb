@@ -1,6 +1,6 @@
 require 'cora'
 require 'siri_objects'
-require 'onebusaway_updated'
+require 'onebusaway'
 
 #######
 # Remember to add other plugins to the "config.yml" file if you create them!
