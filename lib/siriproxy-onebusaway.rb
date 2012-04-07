@@ -9,7 +9,7 @@ require 'onebusaway_updated'
 class SiriProxy::Plugin::OneBusAway < SiriProxy::Plugin
 def initialize(config)
    apiKey = config['api_keyOBA']
-   ::Onebusaway.api_key = '#{apiKey}'
+   #::Onebusaway.api_key = '#{apiKey}'
 end
 
 # find stops nearby a given latitude and longitude
